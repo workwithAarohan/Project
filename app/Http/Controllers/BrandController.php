@@ -20,7 +20,7 @@ class BrandController extends Controller
         $brand = Brand::where('subcat_id',$id)->get();
         $brand->count = Brand::where('subcat_id',$id)->count();
         $dropdown = Navbar::dropdown();
-        return View::make('brand.index',compact('subcategory','brand','cartcount','dropdown'));
+        return View::make('brand.index',compact('subcategory','brand','dropdown'));
     }
 
     public function create($id)

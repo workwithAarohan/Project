@@ -29,7 +29,7 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        $category = Category::all();
+        $category = Category::all();  //Select * from categories;
         $category->count = Category::count();
         $dropdown = Navbar::dropdown();
         return View::make('category.index',compact('category','dropdown'));

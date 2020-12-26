@@ -34,7 +34,7 @@ class CounterController extends Controller
         // $cartcount = Navbar::cart();
         $dropdown = Navbar::dropdown();
     
-        return View::make('counter.index',compact('counter','cartcount','dropdown'));
+        return View::make('counter.index',compact('counter','dropdown'));
     }
 
     public function addcart(Request $request)

@@ -26,7 +26,7 @@ class NavController extends Controller
         // $cartcount = Navbar::cart();
         $dropdown = Navbar::dropdown();
 
-        return view('dashboard',compact('subcategory','product','cartcount','dropdown'));
+        return view('dashboard',compact('subcategory','product','dropdown'));
     }
 
     public function search(Request $request)

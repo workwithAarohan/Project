@@ -26,7 +26,7 @@ class SubcategoryController extends Controller
         $subcategory = Subcategory::where('cat_id',$id)->get();
         $subcategory->count= Subcategory::where('cat_id',$id)->count();
         $dropdown = Navbar::dropdown();
-        return View::make('subcategory.index',compact('subcategory','category','cartcount','dropdown')); 
+        return View::make('subcategory.index',compact('subcategory','category','dropdown')); 
     }
 
     /**

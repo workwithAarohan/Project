@@ -30,7 +30,7 @@ class ProductController extends Controller
         $product->count = Product::where('brand_id',$id)->count();
         $dropdown = Navbar::dropdown();
 
-        return View::make('product.index',compact('brand','product','cartcount','dropdown'));
+        return View::make('product.index',compact('brand','product','dropdown'));
     }
 
     public function allbrands($id)
@@ -145,7 +145,7 @@ class ProductController extends Controller
 
         $dropdown = Navbar::dropdown();
 
-        return View::make('product.show',compact('product','description','brand','cartcount','dropdown','review'));
+        return View::make('product.show',compact('product','description','brand','dropdown','review'));
     }
 
     
